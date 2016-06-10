@@ -373,7 +373,7 @@ module.exports =
     },
     componentDidMount: function componentDidMount() {
       $.ajax({
-        url: "http://localhost:5000/clubs/",
+        url: "http://drafts4you.com:5000/clubs",
         dataType: 'json',
         cache: false,
         success: (function (data) {
