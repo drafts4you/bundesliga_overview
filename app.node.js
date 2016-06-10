@@ -697,8 +697,12 @@ module.exports =
       var teamList = this.props.data.map(function (team) {
         return _react2['default'].createElement(
           'div',
-          null,
-          team.name,
+          { className: 'SoccerPlayer' },
+          _react2['default'].createElement(
+            'h2',
+            null,
+            team.name
+          ),
           _react2['default'].createElement(_SoccerPlayer2['default'], { team: team })
         );
       });
