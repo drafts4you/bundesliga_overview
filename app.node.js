@@ -363,8 +363,8 @@ module.exports =
     getInitialState: function getInitialState() {
       return {
         data: {
-          results: {
-            player: []
+          _items: {
+            lineup: []
           }
         },
         query: "",
@@ -373,12 +373,12 @@ module.exports =
     },
     componentDidMount: function componentDidMount() {
       $.ajax({
-        url: "https://www.kimonolabs.com/api/868a0poe?&apikey=aQmNw9gsSheIGdCNqm1FEpclGVb9RUaW&kimmodify=1",
+        url: "http://localhost:5000/clubs/",
         dataType: 'json',
         cache: false,
         success: (function (data) {
           this.setState({ data: data });
-          this.setState({ filteredData: data.results.player });
+          this.setState({ filteredData: data['_items'] });
         }).bind(this),
         error: (function (xhr, status, err) {
           console.error(this.props.url, status, err.toString());
@@ -390,8 +390,8 @@ module.exports =
       console.log(queryText);
       //get query result
       var queryResult = [];
-      this.state.data.results.player.forEach(function (person) {
-        if (person.name.toLowerCase().indexOf(queryText.toLowerCase()) != -1) queryResult.push(person);
+      this.state.data._items.lineup.forEach(function (person) {
+        if (person.toLowerCase().indexOf(queryText.toLowerCase()) != -1) queryResult.push(person);
       });
 
       this.setState({
@@ -415,14 +415,7 @@ module.exports =
         _react2['default'].createElement(
           'h1',
           null,
-          'Bundesliga Spieler'
-        ),
-        _react2['default'].createElement(
-          'p',
-          { style: updateColor },
-          'letztes Update: ',
-          this.state.data.thisversionrun,
-          _react2['default'].createElement('br', null)
+          'EM Spieler'
         ),
         _react2['default'].createElement(
           'h5',
@@ -644,19 +637,17 @@ module.exports =
     _createClass(SoccerPlayer, [{
       key: 'render',
       value: function render() {
+        var teamList = this.props.team.lineup.map(function (player) {
+          return _react2['default'].createElement(
+            'p',
+            null,
+            player
+          );
+        });
         return _react2['default'].createElement(
           'div',
           null,
-          _react2['default'].createElement(
-            'h2',
-            null,
-            this.props.playerclub
-          ),
-          _react2['default'].createElement(
-            'p',
-            null,
-            this.props.playername
-          )
+          teamList
         );
       }
     }]);
@@ -703,16 +694,18 @@ module.exports =
     displayName: 'SoccerPlayerList',
 
     render: function render() {
-      console.log(this.props.data);
-
-      var playerList = this.props.data.map(function (player) {
-        return _react2['default'].createElement(_SoccerPlayer2['default'], { playername: player.name, playerclub: player.club, key: player.id });
+      var teamList = this.props.data.map(function (team) {
+        return _react2['default'].createElement(
+          'div',
+          null,
+          team.name,
+          _react2['default'].createElement(_SoccerPlayer2['default'], { team: team })
+        );
       });
-
       return _react2['default'].createElement(
         'div',
         null,
-        playerList
+        teamList
       );
     }
   });
