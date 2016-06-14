@@ -637,7 +637,7 @@ module.exports =
     _createClass(SoccerPlayer, [{
       key: 'render',
       value: function render() {
-        var teamList = this.props.team.lineup.slice(0, 10).map(function (player) {
+        var teamList = this.props.team.lineup.slice(0, 11).map(function (player) {
           return _react2['default'].createElement(
             'p',
             null,
