@@ -408,7 +408,8 @@ module.exports =
       var updateColor = {
         color: 'grey'
       };
-
+      /*<h5>Looking for a specific player?</h5>
+       <SearchBox query={this.state.query} doSearch={this.doSearch}/>*/
       return _react2['default'].createElement(
         'div',
         { className: 'InstantBox' },
@@ -417,12 +418,6 @@ module.exports =
           null,
           'EM Spieler'
         ),
-        _react2['default'].createElement(
-          'h5',
-          null,
-          'Looking for a specific player?'
-        ),
-        _react2['default'].createElement(SearchBox, { query: this.state.query, doSearch: this.doSearch }),
         this.renderResults()
       );
     }
