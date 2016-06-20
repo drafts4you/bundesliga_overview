@@ -445,7 +445,7 @@ module.exports =
             { href: 'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar', target: '_BLANK' },
             'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar'
           ),
-          ' zum Tool. Über Feedback und Ideen zur weiteren Verbesserung würden wir uns natürlich auch freuen.'
+          ') zum Tool. Über Feedback und Ideen zur weiteren Verbesserung würden wir uns natürlich auch freuen.'
         ),
         _react2['default'].createElement(
           'p',
