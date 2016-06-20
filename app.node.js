@@ -387,19 +387,25 @@ module.exports =
     },
 
     doSearch: function doSearch(queryText) {
-      console.log(queryText);
       //get query result
       var queryResult = [];
-      this.state.data._items.forEach(function (team) {
-        team.lineup.forEach(function (person) {
-          if (person.toLowerCase().indexOf(queryText.toLowerCase()) != -1) queryResult.push(team);
+      if (queryText.length > 0) {
+        this.state.data._items.forEach(function (team) {
+          team.lineup.forEach(function (person) {
+            if (person.toLowerCase().indexOf(queryText.toLowerCase()) != -1) queryResult.push(team);
+          });
         });
-      });
 
-      this.setState({
-        query: queryText,
-        filteredData: queryResult
-      });
+        this.setState({
+          query: queryText,
+          filteredData: queryResult
+        });
+      } else {
+        this.setState({
+          query: "",
+          filteredData: this.state.data['_items']
+        });
+      }
     },
 
     renderResults: function renderResults() {
