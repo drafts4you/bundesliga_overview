@@ -439,13 +439,13 @@ module.exports =
             { href: 'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar', target: '_BLANK' },
             'Forenthread'
           ),
-          ' (',
+          '  zum Tool (',
           _react2['default'].createElement(
             'a',
             { href: 'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar', target: '_BLANK' },
-            'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar'
+            'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verfügbar'
           ),
-          ') zum Tool. Über Feedback und Ideen zur weiteren Verbesserung würden wir uns natürlich auch freuen.'
+          '). Über Feedback und Ideen zur weiteren Verbesserung würden wir uns natürlich auch freuen.'
         ),
         _react2['default'].createElement(
           'p',
