@@ -390,8 +390,10 @@ module.exports =
       console.log(queryText);
       //get query result
       var queryResult = [];
-      this.state.data._items.lineup.forEach(function (person) {
-        if (person.toLowerCase().indexOf(queryText.toLowerCase()) != -1) queryResult.push(person);
+      this.state.data._items.forEach(function (team) {
+        team.lineup.forEach(function (person) {
+          if (person.toLowerCase().indexOf(queryText.toLowerCase()) != -1) queryResult.push(team);
+        });
       });
 
       this.setState({
@@ -408,8 +410,7 @@ module.exports =
       var updateColor = {
         color: 'grey'
       };
-      /*<h5>Looking for a specific player?</h5>
-       <SearchBox query={this.state.query} doSearch={this.doSearch}/>*/
+
       return _react2['default'].createElement(
         'div',
         { className: 'InstantBox' },
@@ -433,6 +434,12 @@ module.exports =
           null,
           'In Zukunft möchten wir das Tool weiter ausbauen und neue Funktionen einfügen. Zur neuen Saison könnt ihr also mit weiteren Features rechnen.'
         ),
+        _react2['default'].createElement(
+          'h5',
+          null,
+          'Looking for a specific player?'
+        ),
+        _react2['default'].createElement(SearchBox, { query: this.state.query, doSearch: this.doSearch }),
         this.renderResults()
       );
     }
