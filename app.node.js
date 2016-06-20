@@ -433,7 +433,19 @@ module.exports =
         _react2['default'].createElement(
           'p',
           null,
-          'Aktuell befindet sich unsere App noch im Beta-Stadium. Fehler können also vorkommen, Ladezeiten sind noch nicht optimiert und wir übernehmen keine Gewährleistung für die gemachten Angaben. Solltet ihr Fehler finden meldet sie bitte in unserem Forenthread zum Tool. Über Feedback und Ideen zur weiteren Verbesserung würden wir uns natürlich auch freuen.'
+          'Aktuell befindet sich unsere App noch im Beta-Stadium. Fehler können also vorkommen, Ladezeiten sind noch nicht optimiert und wir übernehmen keine Gewährleistung für die gemachten Angaben. Solltet ihr Fehler finden meldet sie bitte in unserem ',
+          _react2['default'].createElement(
+            'a',
+            { href: 'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar', target: '_BLANK' },
+            'Forenthread'
+          ),
+          ' (',
+          _react2['default'].createElement(
+            'a',
+            { href: 'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar', target: '_BLANK' },
+            'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar'
+          ),
+          ' zum Tool. Über Feedback und Ideen zur weiteren Verbesserung würden wir uns natürlich auch freuen.'
         ),
         _react2['default'].createElement(
           'p',
