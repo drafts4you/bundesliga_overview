@@ -423,34 +423,17 @@ module.exports =
         _react2['default'].createElement(
           'h1',
           null,
-          'Drafts4You EM App'
+          'Drafts4You EPL App'
         ),
         _react2['default'].createElement(
           'p',
           null,
-          'Unsere EM App erlaubt es euch, eure Daily Fantasy Sports Aufstellungen zentral zu überprüfen. Wir bieten euch dabei stets die offiziellen Aufstellungen ab etwa einer Stunde vor Spielbeginn. Mit der Suchfunktion könnt ihr bequem nach einzelnen Spielern eures Teams suchen um deren Nominierung für die Startelf zu bestätigen. Alle Aufstellungen sind nach Abpfiff noch für 48 Stunden abrufbar.'
+          'Unsere English Premier League App erlaubt es euch, eure Daily Fantasy Sports Aufstellungen zentral zu überprüfen. Wir bieten euch dabei stets die offiziellen Aufstellungen ab etwa einer Stunde vor Spielbeginn. Mit der Suchfunktion könnt ihr bequem nach einzelnen Spielern eures Teams suchen um deren Nominierung für die Startelf zu bestätigen.'
         ),
         _react2['default'].createElement(
           'p',
           null,
-          'Aktuell befindet sich unsere App noch im Beta-Stadium. Fehler können also vorkommen, Ladezeiten sind noch nicht optimiert und wir übernehmen keine Gewährleistung für die gemachten Angaben. Solltet ihr Fehler finden meldet sie bitte in unserem ',
-          _react2['default'].createElement(
-            'a',
-            { href: 'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar', target: '_BLANK' },
-            'Forenthread'
-          ),
-          '  zum Tool (',
-          _react2['default'].createElement(
-            'a',
-            { href: 'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verf%C3%BCgbar', target: '_BLANK' },
-            'http://www.drafts4you.com/topic/279/drafts4you-em-app-ab-sofort-verfügbar'
-          ),
-          '). Über Feedback und Ideen zur weiteren Verbesserung würden wir uns natürlich auch freuen.'
-        ),
-        _react2['default'].createElement(
-          'p',
-          null,
-          'In Zukunft möchten wir das Tool weiter ausbauen und neue Funktionen einfügen. Zur neuen Saison könnt ihr also mit weiteren Features rechnen.'
+          'Aktuell befindet sich unsere App noch im Beta-Stadium. Fehler können also vorkommen, Ladezeiten sind noch nicht optimiert und wir übernehmen keine Gewährleistung für die gemachten Angaben. Solltet ihr Fehler finden meldet sie bitte in unserem Forenthread zum Tool. Über Feedback und Ideen zur weiteren Verbesserung würden wir uns natürlich auch freuen.'
         ),
         _react2['default'].createElement(
           'h5',
